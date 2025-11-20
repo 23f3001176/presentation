@@ -1,0 +1,5 @@
+[
+  {"id":1,"latency":120,"value":10},
+  {"id":2,"latency":95,"value":12},
+  {"id":3,"latency":110,"value":9}
+]
