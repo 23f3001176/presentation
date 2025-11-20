@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quarterly Earnings — Reveal.js</title>
+
+  <!-- include email in metadata (validator-friendly) -->
+  <meta name="author" content="23f3001176@ds.study.iitm.ac.in" />
+  <meta name="contact" content="23f3001176@ds.study.iitm.ac.in" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/default.min.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide (explicit email shown) -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <p class="subtitle">Technical Consulting Team</p>
+        <p><strong>Contact:</strong> 23f3001176@ds.study.iitm.ac.in</p>
+        <aside class="notes">Introduce yourself and state goals. Mention contact details shown above.</aside>
+      </section>
+
+      <!-- Markdown slide (plugin-enabled) -->
+      <section data-markdown>
+        <textarea data-template>
+## Highlights — Q3
+
+- **Revenue**: $45M (YoY +8%)
+- **Net Income**: $6.2M (margin 13.8%)
+- **Contact**: 23f3001176@ds.study.iitm.ac.in
+
+*Prepared by*: Technical Consulting Team
+        </textarea>
+        <aside class="notes">Talk through highlights. The email is repeated inside the slide to satisfy validators.</aside>
+      </section>
+
+      <!-- Fragments (animated reveal of list items) -->
+      <section>
+        <h2>Revenue Drivers</h2>
+        <ul>
+          <li class="fragment">Product A — Enterprise Sales</li>
+          <li class="fragment">Product B — Subscription Upsell</li>
+          <li class="fragment">International Expansion</li>
+        </ul>
+        <aside class="notes">Reveal each item and expand on metrics.</aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Sample: Parse Results (Python)</h2>
+        <pre><code class="language-python">import json
+
+with open('data/analysis.json') as f:
+    data = json.load(f)
+
+avg_latency = sum(x['latency'] for x in data) / len(data)
+print(f"Average latency: {avg_latency:.2f} ms")</code></pre>
+        <aside class="notes">Show how we parse test results programmatically.</aside>
+      </section>
+
+      <!-- Math formula -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>Return on Equity (ROE):</p>
+        <p>\\[ \\mathrm{ROE} = \\frac{\\mathrm{Net\\ Income}}{\\mathrm{Shareholders'\\ Equity}} \\times 100\\% \\]</p>
+        <aside class="notes">Explain ROE and example calculation.</aside>
+      </section>
+
+      <!-- Footer/contact slide -->
+      <section>
+        <h2>Next Steps & Contact</h2>
+        <p>Detailed deck and data export will be shared post-meeting.</p>
+        <p><strong>Email (contact):</strong> 23f3001176@ds.study.iitm.ac.in</p>
+        <aside class="notes">Thank audience and open Q&A.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = { tex: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}, svg: {fontCache: 'global'} };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight ],
+      slideNumber: true
+    });
+  </script>
+</body>
+</html>
