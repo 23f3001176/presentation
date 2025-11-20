@@ -1,0 +1,20 @@
+:root {
+  --r-main-font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+}
+
+.reveal { font-size: var(--r-main-font-size); }
+
+/* chart area */
+.chart {
+  width: 100%;
+  height: calc(100vh - 200px);
+}
+
+/* footer style (keeps email visible) */
+.reveal .slides section p.contact {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
